@@ -46,7 +46,7 @@ jQuery( document ).ready(function( $ ) {
         }
 
         $.ajax({
-            url: 'https://api.callongoogle.net/create',
+            url: 'http://api.callongoogle.net/create',
             type: "get",
             dataType: "json",
             data: data,
