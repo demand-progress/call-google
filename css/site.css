@@ -10,7 +10,7 @@ html, body {
     height: 100%;
 }
 body {
-    font-family: georgia, sans-serif;
+    font-family: 'open sans', arial, sans-serif;
     overflow: -moz-scrollbars-vertical;
     overflow-y: scroll;
 }
@@ -53,7 +53,7 @@ body {
     margin-bottom: 200px;
 }
 h1 {
-    color: #800;
+    color: rgb(68, 68, 68);
     font-size: 2.4em;
     margin-bottom: 30px;
 }
@@ -65,10 +65,10 @@ p {
     margin: 25px 0px;
     font-size: 1.3em;
     line-height: 1.5em;
-    color: #733;
+    color: rgb(68, 68, 68);
 }
 p a {
-    color: #000;
+    color: rgb(36, 93, 193);
 }
 p.small {
     font-size: 1em;
@@ -144,7 +144,7 @@ form button {
     height: 60px;
     line-height: 50px;
     margin: 0px;
-    background: #900;
+    background: #478AF2;
     color: white;
     border: 0px none;
     cursor: pointer;
@@ -167,7 +167,7 @@ form button.disabled {
     cursor: default;
 }
 form button:hover {
-    background: #600;
+    background: #4486EE;
 }
 li {
     font-size: 1.3em;

@@ -7,7 +7,7 @@ var $ES = function(selector, filter){
 	return ($(filter) || document).getElements(selector);
 };
 
-var trackOptimizely = function(ev) {
+var trackEvent = function(ev) {
     window['optimizely'] = window['optimizely'] || [];
     window.optimizely.push(["trackEvent", ev]);
 };
@@ -40,13 +40,13 @@ jQuery( document ).ready(function( $ ) {
             return alert('Please enter a valid US phone number!');
 
         var data = {
-            campaignId: 'fcc-blanket', 
+            campaignId: 'google-nn', 
             userPhone: validatePhone(phone),
-            zipcode: '95051'
+            zipcode: '00000'
         }
 
         $.ajax({
-            url: 'https://call-congress.fightforthefuture.org/create',
+            url: 'https://api.callongoogle.net/create',
             type: "get",
             dataType: "json",
             data: data,
@@ -89,15 +89,15 @@ jQuery( document ).ready(function( $ ) {
 
         e.preventDefault();
 
-        trackOptimizely('share');
+        trackEvent('share');
 
         var tw_text = encodeURIComponent(TWEET_TEXT);
-        window.open('https://twitter.com/intent/tweet?hashtags=&text='+ tw_text +'&related=fightfortheftr');
+        window.open('https://twitter.com/intent/tweet?hashtags=&text='+ tw_text +'&related=demandprogress');
 
     });
 
     $('.a.facebook').click(function(e) {
-        trackOptimizely('share');
+        trackEvent('share');
     });
 
 });
