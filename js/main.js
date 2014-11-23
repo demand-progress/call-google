@@ -8,8 +8,7 @@ var $ES = function(selector, filter){
 };
 
 var trackEvent = function(ev) {
-    window['optimizely'] = window['optimizely'] || [];
-    window.optimizely.push(["trackEvent", ev]);
+    ga('send', 'event', ev);
 };
 
 jQuery( document ).ready(function( $ ) {
@@ -51,7 +50,7 @@ jQuery( document ).ready(function( $ ) {
             dataType: "json",
             data: data,
             success: function(res) {
-                trackOptimizely('call_fcc');
+                trackEvent('call_fcc');
                 console.log('Placed call-congress call: ', res);
             }
         });
