@@ -219,6 +219,9 @@ a.btn.facebook {
 a.btn.twitter {
     background-color: #2D98D6;
 }
+a.btn.close {
+    background-color: #111;
+}
 a.btn .bubble {
     position: absolute;
     bottom: 80px;
