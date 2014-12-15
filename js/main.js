@@ -8,6 +8,9 @@ var $ES = function(selector, filter){
 };
 
 var trackEvent = function(ev) {
+    window['optimizely'] = window['optimizely'] || [];
+    window.optimizely.push(["trackEvent", ev]);
+
     ga('send', 'event', ev);
 };
 
