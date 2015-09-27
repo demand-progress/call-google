@@ -42,19 +42,19 @@ jQuery( document ).ready(function( $ ) {
             return alert('Please enter a valid US phone number!');
 
         var data = {
-            campaignId: 'google-nn', 
+            campaignId: 3, 
             userPhone: validatePhone(phone),
             zipcode: '00000'
         }
 
         $.ajax({
-            url: 'http://api.callongoogle.net/create',
+            url: 'http://demandprogress.callpower.org/call/create',
             type: "get",
             dataType: "json",
             data: data,
             success: function(res) {
-                trackEvent('call_fcc');
-                console.log('Placed call-congress call: ', res);
+                trackEvent('call_google');
+                console.log('Placed call-power call: ', res);
             }
         });
         $('.overlay').css('display', 'table');
